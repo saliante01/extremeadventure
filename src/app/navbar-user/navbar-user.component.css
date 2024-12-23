@@ -1,0 +1,162 @@
+/* General: Navbar */
+.navbar {
+  height: 60px;
+  background-color: black;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1050;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Logo dinámico */
+.navbar-logo {
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.navbar-scrolled .navbar-logo {
+  height: 35px; /* Cambia el tamaño del logo al hacer scroll */
+}
+
+/* Navbar por defecto (sin scroll) */
+.navbar-default {
+  background-color: black;
+  color: white;
+}
+
+.navbar-default .nav-link {
+  color: white !important; /* Asegura que los links sean blancos */
+}
+
+.navbar-default .navbar-brand {
+  color: white;
+}
+
+/* Navbar con scroll */
+.navbar-scrolled {
+  background-color: white !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-scrolled .nav-link {
+  color: black !important;
+}
+
+.navbar-scrolled .navbar-brand {
+  color: black;
+}
+
+/* Links de navegación */
+.nav-link {
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: white; /* Asegura que el texto sea blanco por defecto */
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Cambio de color a celeste cuando el cursor pasa por encima */
+.navbar-nav .nav-link:hover {
+  color: #00bfff !important; /* Cambia el color del texto a celeste */
+  background-color: transparent !important; /* Elimina el fondo */
+}
+
+
+
+
+/* Admin Label */
+.admin-label {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: green;
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #28a745;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Pantallas grandes (1920x1080) */
+@media (min-width: 1920px) {
+  .navbar {
+      height: 70px;
+      padding: 0 40px;
+  }
+
+  .nav-link {
+      font-size: 1.2rem;
+      padding: 10px 20px;
+  }
+
+  .navbar-logo {
+      height: 50px;
+  }
+
+  .admin-label {
+      font-size: 1.2rem;
+      gap: 10px;
+  }
+
+  .status-dot {
+      width: 12px;
+      height: 12px;
+  }
+}
+
+/* Responsivo para móviles */
+@media (max-width: 768px) {
+  .navbar {
+      flex-wrap: wrap;
+      padding: 10px 15px;
+  }
+
+  .navbar-nav {
+      flex-direction: column;
+      align-items: flex-start;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 100%; /* Ocupa todo el ancho */
+      padding: 10px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  /* Sin scroll: Fondo negro, textos blancos */
+  .navbar-default .navbar-nav {
+      background-color: black;
+  }
+
+  .navbar-default .navbar-nav .nav-link {
+      color: white !important;
+  }
+
+  /* Con scroll: Fondo blanco, textos negros */
+  .navbar-scrolled .navbar-nav {
+      background-color: white;
+  }
+
+  .navbar-scrolled .navbar-nav .nav-link {
+      color: black !important;
+  }
+
+  .nav-link {
+      text-align: left;
+      padding: 10px 15px;
+      width: 100%;
+  }
+
+  .admin-label {
+      margin-top: 10px;
+      justify-content: center;
+  }
+}

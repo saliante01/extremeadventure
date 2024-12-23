@@ -1,0 +1,16 @@
+<div class="start-process-container">
+    <div class="terms-box">
+      <label>
+        <input type="checkbox" [(ngModel)]="termsAccepted" />
+        He leído los términos y condiciones
+      </label>
+      <button
+        class="start-button"
+        *ngIf="termsAccepted"
+        (click)="navigateToRegistration()"
+      >
+        Ir a inscripción
+      </button>
+    </div>
+  </div>
+  

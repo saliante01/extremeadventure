@@ -1,0 +1,148 @@
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin: 2rem 0;
+}
+
+.carousel {
+  display: flex;
+  width: 80%;
+  overflow: visible;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 2rem;
+}
+
+/* Estilo básico de las tarjetas */
+.day-card {
+  position: relative;
+  background-color: #f3f4f6;
+  padding: 2rem;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  height: 600px;
+  width: 350px;
+  margin-right: 1rem;
+  text-align: center;
+  flex-shrink: 0;
+  transition: border-radius 0.3s ease-in-out;
+  z-index: 1;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 0;
+  margin-top: 100px;
+}
+
+.day-card::before {
+  content: '';
+  position: absolute;
+  top: -25px;
+  left: -25px;
+  width: 60px;
+  height: 60px;
+  background-color: #0c347e;
+  border-radius: 40px 40px 0px 40px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.day-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #0c347e;
+}
+
+.activity {
+  margin-bottom: 1rem;
+  color: #0c347e;
+}
+
+.carousel-button {
+  background-color: #2d3748;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+}
+
+.carousel-button.prev {
+  left: 2%;
+}
+
+.carousel-button.next {
+  right: 30px;
+}
+
+.requirements {
+  margin-top: 1rem;
+  padding: 1rem 0;
+}
+
+.requirements h3 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #0c347e;
+  margin-bottom: 0.5rem;
+}
+
+.requirements ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.requirements li {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.requirements li strong {
+  font-weight: bold;
+  color: #0c347e;
+}
+
+.requirements li::before {
+  content: '✔';
+  color: #4caf50;
+  margin-right: 8px;
+  font-size: 1.2rem;
+}
+
+.requirements li:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .carousel-track {
+    gap: 2rem; /* Mantener el gap en 2rem */
+  }
+
+  .carousel-button {
+    height: 40px;
+    width: 40px;
+    font-size: 1.5rem;
+  }
+
+  .day-card {
+    width: 300px; /* Aumentar el tamaño de la tarjeta en móviles */
+    margin-right: 1rem; /* Ajustar el margen entre las tarjetas */
+  }
+}
+
+
+

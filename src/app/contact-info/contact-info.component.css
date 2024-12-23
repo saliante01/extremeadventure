@@ -1,0 +1,99 @@
+.contact-container {
+  display: flex;
+  flex-wrap: wrap; /* Permite apilar los elementos en pantallas pequeñas */
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 100px;
+}
+
+.contact-info {
+  flex: 1;
+  max-width: 50%;
+  padding-right: 20px;
+  color: #0c347e;
+}
+
+.contact-info h2 {
+  font-size: clamp(1.5rem, 2vw, 2rem); /* Tamaño dinámico */
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #0c347e;
+}
+
+.contact-info p {
+  font-size: clamp(0.9rem, 1.5vw, 1rem); /* Tamaño dinámico */
+  line-height: 1.6;
+  margin-bottom: 10px;
+  color: #0c347e;
+}
+
+.contact-button {
+  background-color: #5a9bd6;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: clamp(0.9rem, 1.5vw, 1rem); /* Tamaño dinámico */
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: #3b7fb1;
+}
+
+.contact-image {
+  flex: 1;
+  max-width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Clase para redondear bordes específicos */
+.round-top-left-bottom-right {
+  border-top-left-radius: 50px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 0;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column; /* Apila los elementos verticalmente */
+    padding: 20px;
+  }
+
+  .contact-info {
+    max-width: 100%; /* Toma todo el ancho disponible */
+    padding-right: 0;
+    margin-bottom: 20px; /* Añade separación entre secciones */
+    text-align: center; /* Centra el texto en pantallas pequeñas */
+  }
+
+  .contact-image {
+    max-width: 100%; /* Toma todo el ancho disponible */
+  }
+
+  .contact-button {
+    width: 100%; /* Botón más grande y centrado */
+    padding: 10px;
+  }
+
+  .contact-image img {
+    border-radius: 10px; /* Ajusta los bordes redondeados */
+  }
+}

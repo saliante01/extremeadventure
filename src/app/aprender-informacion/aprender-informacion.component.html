@@ -1,0 +1,15 @@
+<div class="faq-wrapper">
+    <h1 class="title">Lo que podrán aprender</h1>
+    <div *ngFor="let item of faqList" class="faq-item">
+      <button class="faq-question" (click)="toggleAnswer(item)">
+        {{ item.question }}
+        <span class="faq-icon">{{ item.open ? '-' : '+' }}</span>
+      </button>
+      <div *ngIf="item.open">
+        <div *ngFor="let answer of item.answers" class="faq-answer">
+          {{ answer }}
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,120 @@
+/* Asegurar que el html y body ocupen el 100% de altura */
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+
+/* Configuración del contenedor principal */
+.what-we-offer-container {
+  position: relative;
+  background-color: #f0f0f0;
+  padding: 40px 20px;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+}
+
+.section-title {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  color: #033893;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.sine-wave {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  z-index: 1;
+  margin-top: -150px;
+}
+
+.icon-container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 100px;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 2;
+  margin-top: 100px;
+}
+
+.icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  text-align: center;
+  max-width: 250px;
+}
+
+.icon-item img {
+  width: clamp(230px, 20vw, 100px); /* Ancho más grande */
+  height: auto;
+}
+
+
+.icon-item h3 {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  color: #033893;
+}
+
+.icon-item p {
+  font-size: clamp(0.8rem, 2vw, 1rem);
+  text-align: center;
+  color: #033893c4;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .what-we-offer-container {
+    padding: 20px 10px;
+  }
+
+  .icon-container {
+    gap: 80px;
+    flex-direction: column;
+    margin-top: 80px;
+  }
+
+  .icon-item {
+    max-width: 90%;
+  }
+
+  .icon-item img {
+    width: 100px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .what-we-offer-container {
+    padding: 60px 40px;
+  }
+
+  .section-title {
+    font-size: 3rem;
+  }
+
+  .icon-container {
+    gap: 120px;
+    margin-top: 150px;
+  }
+
+  .icon-item {
+    max-width: 300px;
+  }
+
+  .icon-item img {
+    width: 200px;
+  }
+}
+

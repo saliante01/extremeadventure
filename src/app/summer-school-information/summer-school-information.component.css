@@ -1,0 +1,84 @@
+.information-wrapper {
+  display: flex;
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: flex-start; /* Alinea el contenido hacia la parte superior */
+  min-height: 50vh; /* Altura mínima */
+  max-height: 100vh; /* Altura máxima */
+  background-color: #f3f3f6; /* Fondo gris claro */
+  padding: 40px 20px; /* Espaciado interno adicional */
+  box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+  overflow: auto; /* Permite el scroll si el contenido supera la altura */
+}
+
+.information-container {
+  text-align: center; /* Centra el texto horizontalmente */
+  color: #333; /* Texto oscuro */
+  max-width: 800px; /* Limita el ancho del texto */
+  width: 100%; /* Asegura que ocupe todo el ancho disponible */
+  margin-top: 50px; /* Añade espacio superior */
+  position: relative; /* Permite ajustes independientes */
+  box-sizing: border-box; /* Considera el padding para el ancho total */
+}
+
+.information-container h2 {
+  font-size: clamp(2rem, 4vw, 3rem); /* Tamaño dinámico */
+  color: #0c347e; /* Azul oscuro */
+  margin-bottom: 20px;
+}
+
+.information-container p {
+  font-size: clamp(1rem, 2.5vw, 1.2rem); /* Tamaño dinámico */
+  color: #0a3e72; /* Azul claro */
+  line-height: 1.6; /* Mejor legibilidad */
+  margin-bottom: 20px;
+}
+
+/* Media Queries para pantallas móviles (ancho máximo: 768px) */
+@media (max-width: 768px) {
+  .information-wrapper {
+    flex-direction: column; /* Apila los elementos verticalmente */
+    align-items: center; /* Centra el contenido */
+    padding: 20px; /* Reduce el espaciado interno */
+    min-height: 60vh; /* Ajusta la altura mínima automáticamente */
+    gap: 10px; /* Espaciado entre elementos */
+  }
+
+  .information-container {
+    margin-top: 20px; /* Reduce el espacio superior */
+    max-width: 90%; /* Ocupa la mayor parte del ancho disponible */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+  }
+
+  .information-container h2 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem); /* Reduce el tamaño del título en móviles */
+  }
+
+  .information-container p {
+    font-size: clamp(0.9rem, 2.5vw, 1rem); /* Reduce el tamaño del texto */
+    line-height: 1.5; /* Ajusta el espaciado entre líneas */
+  }
+}
+
+/* Media Queries para pantallas grandes (ancho mínimo: 1920px) */
+@media (min-width: 1920px) {
+  .information-wrapper {
+    min-height: 60vh; /* Altura mínima */
+    max-height: 100vh; /* Altura máxima */
+    padding: 60px 40px; /* Mayor espaciado interno */
+    gap: 40px; /* Espaciado más amplio entre elementos */
+  }
+
+  .information-container {
+    max-width: 1000px; /* Texto más ancho */
+    width: 100%; /* Asegura flexibilidad */
+  }
+
+  .information-container h2 {
+    font-size: clamp(2.5rem, 5vw, 4rem); /* Título más grande */
+  }
+
+  .information-container p {
+    font-size: clamp(1.2rem, 3vw, 1.5rem); /* Texto más grande */
+    line-height: 1.8; /* Espaciado entre líneas más amplio */
+  }
+}

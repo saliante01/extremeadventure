@@ -1,0 +1,14 @@
+<div class="container">
+  <h2>Crear Campamento</h2>
+  <form (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label class="form-label">Selecciona el tipo de campamento</label>
+      <select class="form-control" [(ngModel)]="semester" name="semester" required>
+        <option value="SUMMER">Verano</option>
+        <option value="WINTER">Invierno</option>
+        <option value="SPRING">Primavera</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Crear Campamento</button>
+  </form>
+</div>

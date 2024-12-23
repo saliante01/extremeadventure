@@ -1,0 +1,123 @@
+.header-container {
+    position: relative;
+    height: 100vh; /* Ocupa toda la pantalla */
+    width: 100%; /* Ancho completo */
+    overflow: hidden; /* Evita desbordes */
+}
+
+.header-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen al tamaño del contenedor */
+}
+
+/* Degradado superpuesto */
+.header-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.95) 10%, rgba(0, 0, 0, 0.7) 30%, rgba(0, 0, 0, 0.3) 70%, rgba(0, 0, 0, 0) 100%);
+    z-index: 5; /* Asegúrate de que esté encima de la imagen */
+    pointer-events: none; /* Permite interactuar con el contenido detrás */
+}
+
+app-navbar {
+    position: fixed; /* Mantén la navbar fija al tope */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999; /* Asegura que la navbar esté sobre todos los demás elementos */
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo semi-transparente para asegurar legibilidad */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para mayor visibilidad */
+}
+
+.header-text {
+    position: absolute;
+    top: 35%; /* Ajusta la posición vertical */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; /* Centra horizontalmente */
+    color: white;
+    z-index: 10; /* Asegura que esté encima de la imagen y el degradado */
+}
+
+.header-title-container {
+    display: inline-flex; /* Coloca los elementos en una línea */
+    align-items: baseline; /* Alinea el texto verticalmente */
+    gap: 10px; /* Espacio entre "Reglas" y otros subtítulos */
+}
+
+.header-title {
+    font-size: clamp(2rem, 6vw, 5rem); /* Tamaño dinámico del texto principal */
+    font-weight: bold; /* Negrita */
+    margin: 0; /* Sin margen */
+    color: white;
+}
+
+.header-subtitle {
+    font-size: clamp(1.5rem, 5vw, 4rem); /* Tamaño dinámico */
+    font-weight: normal; /* Texto sin negrita */
+    margin: 0; /* Sin margen */
+    color: white;
+}
+
+.main-title {
+    font-size: clamp(1.5rem, 4vw, 3rem); /* Tamaño dinámico */
+    font-weight: normal; /* Negrita */
+    color: white;
+    margin: 0 0 20px 0; /* Espaciado entre el título principal y los textos siguientes */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    line-height: 1.2; /* Ajuste de espaciado entre líneas */
+}
+
+.header-location {
+    font-size: clamp(1rem, 3vw, 1.5rem); /* Tamaño dinámico */
+    margin-top: 10px; /* Espaciado entre la ubicación y el texto superior */
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-weight: normal; /* Asegura que no esté en negrita */
+}
+
+.location-icon {
+    font-size: clamp(1rem, 2.5vw, 1.5rem); /* Tamaño dinámico del ícono */
+    color: #d9534f; /* Rojo oscuro para el ícono */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .header-text {
+        top: 50%; /* Ajusta la posición vertical para móviles */
+    }
+
+    .header-title {
+        font-size: 3rem; /* Reduce el tamaño del texto principal */
+    }
+
+    .main-title {
+        font-size: 1.5rem; /* Reduce el tamaño del subtítulo */
+    }
+
+    .header-location {
+        font-size: 1rem; /* Texto más pequeño para móviles */
+    }
+}
+
+@media (min-width: 1920px) {
+    .header-title {
+        font-size: 6rem; /* Texto más grande para pantallas grandes */
+    }
+
+    .main-title {
+        font-size: 3.5rem; /* Subtítulo más prominente */
+    }
+
+    .header-location {
+        font-size: 2rem; /* Ubicación más destacada */
+    }
+}

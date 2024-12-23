@@ -1,0 +1,39 @@
+<div class="camp-container">
+  <div class="camp-header">
+    <h2 class="camp-title">ESCUELA DE VERANO</h2>
+    <p class="camp-description">
+      Disfruta del sol, la naturaleza y la diversión con actividades como ciclismo, trekking, kayak y cabalgatas. Nuestro programa está diseñado para fomentar el desarrollo físico, social y emocional en un ambiente seguro y estimulante.
+    </p>
+    <p class="camp-description">
+      Precio por Persona:
+      CLP 180.000 por semana.
+    </p>
+  </div>
+  <div class="dateprice-container">
+    <div
+      class="dateprice-card"
+      *ngFor="let camp of camps"
+      [ngClass]="{ 'full': camp.status === 'FULL' }"
+    >
+      <h3>{{ camp.status }}</h3>
+      <div class="dates">
+        <div class="start-date">
+          <div class="day">{{ camp.startDate | date: 'dd' }}</div>
+          <div class="month">{{ camp.startDate | date: 'MMM' }}</div>
+          <div class="year">{{ camp.startDate | date: 'yyyy' }}</div>
+        </div>
+        <span class="separator">></span>
+        <div class="end-date">
+          <div class="day">{{ camp.endDate | date: 'dd' }}</div>
+          <div class="month">{{ camp.endDate | date: 'MMM' }}</div>
+          <div class="year">{{ camp.endDate | date: 'yyyy' }}</div>
+        </div>
+      </div>
+      <button *ngIf="camp.status !== 'LLENO'" class="enroll-btn" (click)="enrollNow(camp.id)">
+        VER DETALLES
+      </button>
+      
+      
+    </div>
+  </div>
+</div>

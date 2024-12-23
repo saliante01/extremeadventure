@@ -1,0 +1,89 @@
+/* General container styling */
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 70%; /* Hace que el contenedor ocupe todo el espacio disponible */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Heading styling */
+h2 {
+  text-align: center;
+  color: #343a40;
+  font-size: 24px;
+  margin-bottom: 20px;
+  flex-shrink: 0; /* Asegura que el título no se reduzca */
+}
+
+/* Label styling */
+.form-label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #495057;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* Styling for the select input */
+select.form-control {
+  padding: 10px;
+  font-size: 16px;
+  color: #495057;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+  height: 40px;
+}
+
+select.form-control:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
+}
+
+/* Button styling */
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+button[type="submit"]:active {
+  background-color: #003f7f;
+}
+
+/* Form field spacing */
+.mb-3 {
+  margin-bottom: 20px;
+  flex-grow: 1; /* Permite que los campos crezcan y ocupen el espacio disponible */
+}
+
+/* Optional: Customizing the form input fields for better visual alignment */
+input.form-control,
+select.form-control {
+  height: 40px;
+}
+
+/* Additional: Ensure that the form is vertically spaced out within the container */
+form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}

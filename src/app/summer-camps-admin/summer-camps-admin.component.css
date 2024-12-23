@@ -1,0 +1,132 @@
+/* Contenedor principal */
+.camps-admin-container {
+  display: flex;
+  height: 100vh;
+  flex-direction: row;
+}
+
+/* Contenedor principal del contenido */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #f8f9fa;
+  overflow-y: auto;
+}
+
+/* Título de la página */
+.page-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Contenedor de tarjetas */
+.camps-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Grid flexible */
+  gap: 20px;
+  justify-content: center; /* Centra las tarjetas horizontalmente */
+}
+
+/* Tarjetas */
+.camp-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 350px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.camp-card:hover {
+  transform: translateY(-5px); /* Efecto de elevación */
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-body p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+  color: #495057;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Pantallas grandes (1920x1080) */
+@media (min-width: 1920px) {
+  .camps-container {
+    grid-template-columns: repeat(4, 1fr); /* Máximo 4 columnas */
+    gap: 30px; /* Más espacio entre tarjetas */
+  }
+
+  .camp-card {
+    max-width: 400px;
+    padding: 25px;
+  }
+
+  .page-title {
+    font-size: 2.5rem;
+  }
+}
+
+/* Responsivo para tablets y pantallas medianas (1024px a 1919px) */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .camps-container {
+    grid-template-columns: repeat(3, 1fr); /* Máximo 3 tarjetas por fila */
+    gap: 20px;
+  }
+
+  .camp-card {
+    padding: 15px;
+  }
+
+  .page-title {
+    font-size: 2rem;
+  }
+}
+
+/* Responsivo para móviles (ancho máximo: 768px) */
+@media (max-width: 768px) {
+  .camps-container {
+    display: flex;
+    flex-direction: column; /* Apila las tarjetas verticalmente */
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .camp-card {
+    width: 100%; /* Tarjetas ocupan todo el ancho del contenedor */
+    max-width: none;
+    padding: 10px;
+  }
+
+  .page-title {
+    font-size: 1.5rem;
+  }
+
+  .btn-primary {
+    font-size: 0.9rem;
+  }
+}

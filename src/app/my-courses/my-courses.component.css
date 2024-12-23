@@ -1,0 +1,56 @@
+/* Contenedor principal */
+.my-courses-container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  /* Barra lateral */
+  app-lateralvar-user {
+    flex: 0 0 250px; /* Tamaño fijo de la barra lateral */
+    background-color: #1c1f2b;
+  }
+  
+  /* Contenedor de cursos */
+  .courses-container {
+    flex: 1; /* Toma el resto del espacio disponible */
+    padding: 20px;
+    background-color: #f8f9fa;
+    overflow-y: auto;
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Diseño de cuadrícula */
+  .courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  /* Estilo de las tarjetas */
+  .course-card {
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .card-body p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #495057;
+  }
+  

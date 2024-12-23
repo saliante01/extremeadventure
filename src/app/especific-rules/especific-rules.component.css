@@ -1,0 +1,108 @@
+.faq-wrapper {
+    min-height: 50vh; /* Ocupa al menos la mitad de la ventana */
+    max-height: 50vh; /* Limita la altura máxima */
+    background-color: #f3f3f6; /* Gris claro */
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alineación izquierda */
+    overflow-y: auto; /* Añade scroll si el contenido supera 50vh */
+  }
+  
+  .title {
+    font-size: clamp(2rem, 5vw, 4rem); /* Tamaño dinámico */
+    font-weight: bold;
+    color: #0c347e; /* Azul */
+    margin-bottom: 30px;
+    margin-left: 0;
+  }
+  
+  .faq-item {
+    width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
+    margin-bottom: 10px;
+    border-bottom: 1px solid #dee2e6; /* Línea debajo de cada pregunta */
+    box-sizing: border-box; /* Asegura que los bordes no afecten el ancho */
+  }
+  
+  .faq-question {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    background: none;
+    border: none;
+    text-align: left;
+    font-size: clamp(1rem, 2.5vw, 1.125rem); /* Tamaño dinámico */
+    font-weight: bold;
+    color: #6988c1;
+    padding: 10px 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: color 0.3s ease; /* Transición de color */
+  }
+  
+  .faq-question:hover {
+    color: #5a76b8; /* Cambia ligeramente el color al pasar el cursor */
+  }
+  
+  .faq-question:focus {
+    outline: none;
+  }
+  
+  .faq-icon {
+    font-size: clamp(1.5rem, 3vw, 1.875rem); /* Tamaño dinámico */
+    color: #007bff;
+    transition: transform 0.3s ease; /* Añade un efecto al expandir */
+  }
+  
+  .faq-icon.open {
+    transform: rotate(180deg); /* Rota el ícono al estar abierto */
+  }
+  
+  .faq-answer {
+    font-size: clamp(0.9rem, 2.5vw, 1rem); /* Tamaño dinámico */
+    color: #0c347e; /* Gris oscuro */
+    padding: 10px 0;
+    line-height: 1.6; /* Mejor espaciado entre líneas */
+    margin-left: 10px; /* Alinea con las preguntas */
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .faq-wrapper {
+      padding: 20px; /* Reduce el espaciado interno */
+      align-items: center; /* Alineación centrada para móviles */
+    }
+  
+    .faq-item {
+      max-width: 100%; /* Ocupa todo el ancho disponible */
+    }
+  
+    .faq-question {
+      font-size: 1rem; /* Texto más pequeño para móviles */
+    }
+  
+    .faq-answer {
+      font-size: 0.9rem; /* Texto más compacto */
+      margin-left: 0; /* Elimina margen adicional */
+    }
+  }
+  
+  @media (min-width: 1920px) {
+    .faq-wrapper {
+      padding: 60px; /* Más espacio interno para pantallas grandes */
+    }
+  
+    .title {
+      font-size: clamp(2.5rem, 6vw, 5rem); /* Título más prominente */
+    }
+  
+    .faq-question {
+      font-size: 1.25rem; /* Preguntas más grandes */
+    }
+  
+    .faq-answer {
+      font-size: 1rem; /* Respuestas más legibles */
+    }
+  }
+
+  

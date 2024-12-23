@@ -1,0 +1,69 @@
+<div class="login-container d-flex justify-content-center align-items-center">
+  <!-- Imagen de fondo -->
+  <img src="assets/campamento_de_verano.jpg" alt="Campamento de Verano" class="background-image" />
+  
+  <!-- Superposición de degradado -->
+  <div class="background-overlay"></div>
+
+  <!-- Logo en la parte superior izquierda -->
+  <img src="assets/logo1.png" alt="Logo" class="logo" />
+
+  <!-- Formulario -->
+  <div class="card shadow p-4">
+    <h2 class="text-center text-primary mb-4">Your Account</h2>
+    <form (ngSubmit)="onLogin()">
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input 
+          type="email" 
+          id="email" 
+          class="form-control" 
+          placeholder="example@gmail.com" 
+          [(ngModel)]="email" 
+          name="email" 
+          required 
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input 
+          type="password" 
+          id="password" 
+          class="form-control" 
+          placeholder="Enter your password" 
+          [(ngModel)]="password" 
+          name="password" 
+          required 
+        />
+      </div>
+
+      <button 
+        type="submit" 
+        class="btn btn-primary w-100 mb-2" 
+        [disabled]="!isFormValid()" 
+        id="login-btn"
+      >
+        Login
+      </button>
+
+      <button 
+        type="button" 
+        class="btn btn-outline-primary w-100 mb-2" 
+        (click)="goToRegister()"
+      >
+        Register
+      </button>
+
+      <!-- Botón para volver a "home" -->
+      <button 
+        type="button" 
+        class="btn btn-outline-secondary w-100" 
+        (click)="goHome()"
+      >
+        Back to Home
+      </button>
+    </form>
+  </div>
+</div>
+<app-footer></app-footer>

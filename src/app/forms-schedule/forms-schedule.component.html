@@ -1,0 +1,84 @@
+<div class="container mt-5">
+    <h2>Agendar una actividad</h2>
+    <form (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label class="form-label">Week ID</label>
+        <input
+          type="number"
+          class="form-control"
+          [(ngModel)]="weekId"
+          name="weekId"
+          required
+        />
+      </div>
+  
+      <div class="mb-3">
+        <label class="form-label">Activity</label>
+        <input
+          type="number"
+          class="form-control"
+          [(ngModel)]="activity"
+          name="activity"
+          required
+        />
+      </div>
+  
+      <div class="mb-3">
+        <label class="form-label">Date (YYYY-MM-DD)</label>
+        <input
+          type="date"
+          class="form-control"
+          [(ngModel)]="date"
+          name="date"
+          required
+        />
+      </div>
+  
+      <div class="mb-3">
+        <label class="form-label">Start Time (HH:MM:SS)</label>
+        <input
+          type="time"
+          class="form-control"
+          [(ngModel)]="start_time"
+          name="start_time"
+          required
+        />
+      </div>
+  
+      <div class="mb-3">
+        <label class="form-label">End Time (HH:MM:SS)</label>
+        <input
+          type="time"
+          class="form-control"
+          [(ngModel)]="end_time"
+          name="end_time"
+          required
+        />
+      </div>
+  
+      <div class="mb-3">
+        <label class="form-label">Location</label>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="location"
+          name="location"
+          required
+        />
+      </div>
+  
+      <div class="mb-3">
+        <label class="form-label">Requirements</label>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="requirements"
+          name="requirements"
+          placeholder="Optional"
+        />
+      </div>
+  
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+  

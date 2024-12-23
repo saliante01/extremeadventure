@@ -1,0 +1,82 @@
+.instagram-feed-container {
+  background-color: #ffffff; /* Fondo blanco */
+  padding: 20px; /* Espaciado interno */
+  text-align: center;
+  max-width: 70%; /* Limita el ancho total del contenedor al 70% */
+  margin: 0 auto; /* Centra el contenedor */
+}
+
+.instagram-feed-container h3 {
+  font-size: clamp(2rem, 5vw, 4rem); /* Tamaño dinámico del título */
+  color: #0c347e; /* Texto azul oscuro */
+  margin-bottom: 20px; /* Espaciado debajo del título */
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Tres columnas por fila */
+  column-gap: 1%; /* Espaciado horizontal entre columnas */
+  row-gap: 1%; /* Espaciado vertical entre filas */
+  justify-items: stretch; /* Extiende las fotos para llenar el contenedor */
+}
+
+.photo-item {
+  display: block;
+  width: 100%; /* Ajusta al 100% del espacio disponible */
+  aspect-ratio: 1 / 1; /* Proporción cuadrada */
+  overflow: hidden;
+  padding: 0; /* Elimina cualquier padding interno */
+  margin: 0; /* Elimina cualquier margen externo */
+  border: 0; /* Sin bordes adicionales */
+  box-shadow: none; /* Sin sombra */
+}
+
+.photo-item img {
+  width: 100%; /* Imagen ocupa todo el ancho del contenedor */
+  height: 100%; /* Imagen ocupa toda la altura del contenedor */
+  object-fit: cover; /* Ajusta la imagen dentro del contenedor sin distorsión */
+  margin: 0; /* Elimina cualquier margen de la imagen */
+  padding: 0; /* Elimina cualquier padding de la imagen */
+}
+
+.photo-item:hover {
+  transform: none; /* Elimina el efecto de agrandamiento */
+  box-shadow: none; /* Sin sombra adicional */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .photo-grid {
+    grid-template-columns: repeat(3, 1fr); /* Mantén 3 columnas por fila en pantallas pequeñas */
+    column-gap: 1%; /* Espaciado horizontal reducido */
+    row-gap: 1%; /* Espaciado vertical reducido */
+  }
+
+  .photo-item {
+    width: 100%; /* Ocupa todo el espacio disponible */
+  }
+}
+
+@media (max-width: 480px) {
+  .photo-grid {
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas por fila en pantallas muy pequeñas */
+    column-gap: 2%; /* Espaciado ligeramente mayor en pantallas muy pequeñas */
+    row-gap: 2%; /* Espaciado vertical ajustado */
+  }
+
+  .photo-item {
+    width: 100%; /* Ocupa todo el espacio disponible */
+  }
+}
+
+@media (min-width: 1920px) {
+  .photo-grid {
+    grid-template-columns: repeat(3, 1fr); /* Mantén 3 columnas en pantallas grandes */
+    column-gap: 1%; /* Sin espacio horizontal */
+    row-gap: 1%; /* Espaciado vertical mínimo */
+  }
+
+  .photo-item {
+    width: 100%; /* Mantén el tamaño completo */
+  }
+}

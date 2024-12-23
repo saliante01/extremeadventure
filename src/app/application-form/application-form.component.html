@@ -1,0 +1,49 @@
+<div class="container mt-5">
+  <h2>Formulario de Inscripción</h2>
+  <form (ngSubmit)="onSubmit(form)" #form="ngForm">
+    <div class="mb-3">
+      <label for="nombre" class="form-label">Nombre</label>
+      <input type="text" id="nombre" class="form-control" [(ngModel)]="formData.nombre" name="nombre" required />
+    </div>
+
+    <div class="mb-3">
+      <label for="email" class="form-label">Correo Electrónico</label>
+      <input type="email" id="email" class="form-control" [(ngModel)]="formData.email" name="email" required />
+    </div>
+
+    <div class="mb-3">
+      <label for="rut" class="form-label">RUT</label>
+      <input type="text" id="rut" class="form-control" [(ngModel)]="formData.rut" name="rut" required />
+    </div>
+
+    <div class="mb-3">
+      <label for="telefono" class="form-label">Teléfono</label>
+      <input type="tel" id="telefono" class="form-control" [(ngModel)]="formData.telefono" name="telefono" required />
+    </div>
+
+    <div class="mb-3">
+      <label for="patologica" class="form-label">¿Posee condición patológica?</label>
+      <select class="form-control" [(ngModel)]="formData.patologica" name="patologica">
+        <option value="false">No</option>
+        <option value="true">Sí</option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label for="weeks" class="form-label">Semanas a seleccionar</label>
+      <div class="form-check" *ngFor="let week of weekOptions">
+        <input 
+          type="checkbox" 
+          class="form-check-input" 
+          [value]="week" 
+          (change)="onWeekChange(week, $event)" 
+          [checked]="formData.weeks.includes(week)" 
+          name="weeks"
+        />
+        <label class="form-check-label">Semana {{ week }}</label>
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary" [disabled]="!form.valid">Enviar</button>
+  </form>
+</div>

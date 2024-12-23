@@ -1,0 +1,32 @@
+<div class="header-container">
+  <!-- Navbar -->
+  <app-navbar></app-navbar>
+
+  <!-- Imagen de fondo -->
+  <img src="assets/campamento_de_verano.jpg" alt="Header Image" class="header-image">
+
+  <!-- Contenido del texto centrado -->
+  <div class="header-text">
+    <h1>
+      <span class="title-line">Extreme Adventure</span>
+      <br />
+      <span class="regular-text">Academy</span>
+    </h1>
+    <h3>
+      Pucon, Chile 
+      <i class="bi bi-geo-alt-fill location-icon"></i>
+    </h3>
+  </div>
+
+  <!-- Contenedores para los campamentos -->
+  <div class="camp-container">
+    <a (click)="navigateTo('date-price')" class="camp-card summer">
+      <i class="bi bi-sun"></i>
+      <h4>Summer Camps</h4>
+    </a>
+    <a (click)="navigateTo('date-price')" class="camp-card winter">
+      <i class="bi bi-snow"></i>
+      <h4>Winter Camps</h4>
+    </a>
+  </div>
+</div>

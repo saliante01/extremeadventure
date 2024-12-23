@@ -1,0 +1,34 @@
+<div class="carousel-container">
+  <button class="carousel-button prev" (click)="prev()">‹</button>
+  <div class="carousel">
+    <div class="carousel-track" [style.transform]="carouselTransform">
+      <div *ngFor="let day of daysOfWeek; let i = index" class="day-card">
+        <div
+          class="circle"
+          [ngStyle]="{ 'background-color': getCircleColor(i) }"
+        ></div>
+        <h2 class="day-title">{{ day }}</h2>
+
+        <!-- Mostrar actividades con horarios -->
+        <div class="activity" *ngFor="let activity of activities[day]">
+          <h3>{{ activity.title }}</h3> <!-- Título de la actividad -->
+          <p>
+            {{ activity.time }} | {{ activity.location }}
+          </p>
+
+          <!-- Mostrar requisitos si existen -->
+          <div *ngIf="activity.requirements">
+            <h4>Requisitos:</h4>
+            <ul>
+              <li *ngFor="let requirement of activity.requirements.split(',')">
+                {{ requirement }}
+              </li>
+            </ul>
+          </div>
+          <hr />
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-button next" (click)="next()">›</button>
+</div>

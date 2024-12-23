@@ -1,0 +1,14 @@
+<div class="faq-wrapper">
+    <h1 class="title">Reglas Específicas para Actividades</h1>
+    <div *ngFor="let item of faqList" class="faq-item">
+      <button class="faq-question" (click)="toggleAnswer(item)">
+        {{ item.question }}
+        <span class="faq-icon">{{ item.open ? '-' : '+' }}</span>
+      </button>
+      <div class="faq-answer" *ngIf="item.open">
+        {{ item.answer }}
+      </div>
+    </div>
+  </div>
+  
+  

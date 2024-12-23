@@ -1,0 +1,58 @@
+<div class="container">
+  <h2>Crear Semana para el Campamento</h2>
+  <form (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label class="form-label">Selecciona el campamento</label>
+      <select class="form-control" [(ngModel)]="semester" name="semester" required>
+        <option value="1">Verano</option>
+        <option value="2">Invierno</option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Fecha de inicio</label>
+      <input 
+        type="date" 
+        class="form-control" 
+        [(ngModel)]="start_date" 
+        name="start_date" 
+        required 
+      />
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Fecha de fin</label>
+      <input 
+        type="date" 
+        class="form-control" 
+        [(ngModel)]="end_date" 
+        name="end_date" 
+        required 
+      />
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Precio</label>
+      <input 
+        type="number" 
+        class="form-control" 
+        [(ngModel)]="price" 
+        name="price" 
+        required 
+      />
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Capacidad</label>
+      <input 
+        type="number" 
+        class="form-control" 
+        [(ngModel)]="capacity" 
+        name="capacity" 
+        required 
+      />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Crear Semana</button>
+  </form>
+</div>

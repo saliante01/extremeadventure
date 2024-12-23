@@ -1,0 +1,45 @@
+<div class="container mt-5">
+    <h2>Editar Información del Campamento</h2>
+    
+    <!-- Formulario para editar información del campamento -->
+    <form [formGroup]="campForm" (ngSubmit)="onSubmit()">
+      <!-- Campo ID -->
+      <div class="mb-3">
+        <label for="id" class="form-label">ID</label>
+        <input type="number" class="form-control" id="id" formControlName="id" readonly />
+      </div>
+  
+      <!-- Campo Camp ID -->
+      <div class="mb-3">
+        <label for="camp" class="form-label">Camp ID</label>
+        <input type="number" class="form-control" id="camp" formControlName="camp" />
+      </div>
+  
+      <!-- Campo Fecha de Inicio -->
+      <div class="mb-3">
+        <label for="start_date" class="form-label">Fecha de Inicio</label>
+        <input type="date" class="form-control" id="start_date" formControlName="start_date" />
+      </div>
+  
+      <!-- Campo Fecha de Fin -->
+      <div class="mb-3">
+        <label for="end_date" class="form-label">Fecha de Fin</label>
+        <input type="date" class="form-control" id="end_date" formControlName="end_date" />
+      </div>
+  
+      <!-- Campo Precio -->
+      <div class="mb-3">
+        <label for="price" class="form-label">Precio</label>
+        <input type="number" class="form-control" id="price" formControlName="price" />
+      </div>
+  
+      <!-- Campo Capacidad -->
+      <div class="mb-3">
+        <label for="capacity" class="form-label">Capacidad</label>
+        <input type="number" class="form-control" id="capacity" formControlName="capacity" />
+      </div>
+  
+      <button type="submit" class="btn btn-primary" [disabled]="campForm.invalid">Guardar Cambios</button>
+    </form>
+  </div>
+  

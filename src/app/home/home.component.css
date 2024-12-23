@@ -1,0 +1,15 @@
+:host {
+  display: block;
+  overflow-x: hidden;
+  width: 100vw;
+}
+
+.spacer {
+  margin-top: 100px; /* Mantén el espacio superior para el diseño */
+}
+
+body, html {
+  overflow-x: hidden; /* Desactiva el scroll horizontal */
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,110 @@
+.priorities-container {
+  position: relative;
+  background-color: white;
+  padding: 40px 20px;
+  min-height: 100vh; /* Asegura que el componente ocupe toda la altura */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.image-container {
+  display: flex;
+  flex-wrap: wrap; /* Permite varias filas */
+  gap: 60px; /* Espaciado entre elementos */
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.image-item {
+  display: flex;
+  flex-direction: column; /* Coloca el texto debajo de la imagen */
+  align-items: center;
+  gap: 15px; /* Espaciado entre imagen y texto */
+  text-align: center;
+  width: 270px; /* Ancho fijo ligeramente mayor */
+  color: #333;
+}
+
+.image-item img {
+  width: 220px; /* Aumenta el tamaño de las imágenes */
+  height: 220px; /* Mantén la proporción circular */
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.image-item h3 {
+  font-size: 1.5rem; /* Aumenta el tamaño del título */
+  color: #033893;
+  margin: 0;
+}
+
+.image-item p {
+  font-size: 1.1rem; /* Aumenta el tamaño del texto descriptivo */
+  color: #033893c4;
+  line-height: 1.8; /* Aumenta el espacio entre líneas */
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .priorities-container {
+    padding: 20px 10px;
+    min-height: auto; /* Ajusta la altura automáticamente */
+  }
+
+  .image-container {
+    flex-direction: column; /* Cambia a diseño en columna */
+    gap: 40px; /* Espaciado entre los elementos */
+  }
+
+  .image-item {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    max-width: 300px; /* Limita el ancho máximo */
+  }
+
+  .image-item img {
+    width: 180px; /* Aumenta el tamaño de las imágenes en pantallas pequeñas */
+    height: 180px;
+  }
+
+  .image-item h3 {
+    font-size: 1.3rem; /* Aumenta el tamaño del título */
+  }
+
+  .image-item p {
+    font-size: 1rem; /* Aumenta ligeramente el tamaño del texto */
+  }
+}
+
+@media (min-width: 1920px) {
+  .priorities-container {
+    padding: 60px 40px; /* Incrementa el espacio interno */
+  }
+
+  .image-container {
+    gap: 80px; /* Aumenta el espacio entre las imágenes */
+  }
+
+  .image-item {
+    width: 300px; /* Aumenta el ancho de cada elemento */
+  }
+
+  .image-item img {
+    width: 250px; /* Imágenes más grandes */
+    height: 250px; /* Mantén la proporción */
+  }
+
+  .image-item h3 {
+    font-size: 2rem; /* Títulos más grandes */
+  }
+
+  .image-item p {
+    font-size: 1.3rem; /* Texto descriptivo más grande */
+    line-height: 2; /* Espaciado entre líneas mayor */
+  }
+}
+

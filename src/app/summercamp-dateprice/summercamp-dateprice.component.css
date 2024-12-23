@@ -1,0 +1,119 @@
+.camp-container {
+  padding: 40px;
+  background-color: #f3f3f6; /* Fondo azul claro */
+}
+
+.camp-header {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.camp-title {
+  font-size: clamp(2rem, 4vw, 3rem); /* Tamaño dinámico */
+  font-weight: bold;
+  color: #0c347e; /* Azul */
+  margin: 0;
+}
+
+.camp-description {
+  font-size: clamp(1rem, 2.5vw, 1.2rem); /* Tamaño dinámico */
+  color: #0c347e; /* Gris */
+  margin-top: 20px;
+}
+
+.dateprice-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.dateprice-card {
+  width: clamp(250px, 30vw, 300px); /* Ajusta el ancho dinámicamente */
+  height: clamp(250px, 30vw, 300px); /* Ajusta la altura dinámicamente */
+  background-color: #db6565;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  border-radius: 30px; /* Bordes redondeados */
+}
+
+.dateprice-card.full {
+  background-color: #db6565; /* Color de fondo para estado FULL */
+}
+
+.dateprice-card h3 {
+  margin: 0;
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem); /* Tamaño dinámico */
+  font-weight: bold;
+}
+
+.dateprice-card .dates {
+  margin: 20px 0;
+  font-size: clamp(1rem, 2.5vw, 1.2rem); /* Tamaño dinámico */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.dateprice-card .separator {
+  margin: 0 10px;
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem); /* Tamaño dinámico */
+}
+
+.dateprice-card .enroll-btn {
+  background-color: #cb4b4b;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  cursor: pointer;
+  font-size: clamp(0.9rem, 2.5vw, 1rem); /* Tamaño dinámico */
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.dateprice-card .enroll-btn:hover {
+  background-color: #b53939;
+}
+
+/* Fechas */
+.dates {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.start-date,
+.end-date {
+  text-align: center;
+}
+
+.day {
+  font-size: clamp(1.5rem, 4vw, 2.5rem); /* Tamaño dinámico */
+  font-weight: bold;
+}
+
+.month {
+  font-size: clamp(1rem, 3vw, 1.2rem); /* Tamaño dinámico */
+  text-transform: uppercase;
+}
+
+.year {
+  font-size: clamp(0.8rem, 2.5vw, 1rem); /* Tamaño dinámico */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .camp-header {
+    text-align: center; /* Centra el texto en pantallas pequeñas */
+  }
+
+  .dateprice-container {
+    gap: 10px; /* Reduce el espacio entre tarjetas */
+  }
+}

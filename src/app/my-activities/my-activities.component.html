@@ -1,0 +1,10 @@
+<div class="container">
+  <h2 class="title">My Activities</h2>
+  <div class="activities-list">
+    <div class="activity-card" *ngFor="let activity of activities">
+      <div class="activity-number">{{ activity.id }}</div>
+      <div class="activity-name">{{ activity.title }}</div>
+      <div class="activity-description">{{ activity.description }}</div>
+    </div>
+  </div>
+</div>

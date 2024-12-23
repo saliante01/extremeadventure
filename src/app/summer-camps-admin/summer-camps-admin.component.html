@@ -1,0 +1,22 @@
+<div class="camps-admin-container">
+  <!-- Contenedor principal -->
+  <div class="main-content">
+    <h2 class="page-title">Campamento de verano</h2>
+
+    <!-- Contenedor de tarjetas -->
+    <div class="camps-container">
+      <div class="card camp-card" *ngFor="let camp of camps">
+        <div class="card-body">
+          <h5 class="card-title">{{ camp.camp }}</h5>
+          <p><strong>Fecha de inicio:</strong> {{ camp.start_date }}</p>
+          <p><strong>Fecha de término:</strong> {{ camp.end_date }}</p>
+          <p><strong>Valor:</strong> ${{ camp.price }}</p>
+          <p><strong>Capacidad:</strong> {{ camp.capacity }}</p>
+          <button class="btn btn-primary w-100 mt-3" (click)="administrarCamp(camp)">
+            Administrar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

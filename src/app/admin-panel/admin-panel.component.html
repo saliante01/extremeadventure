@@ -1,0 +1,74 @@
+<div class="admin-panel-container">
+    <!-- Barra lateral -->
+  
+    <!-- Información del usuario -->
+    <div class="user-info d-flex justify-content-center align-items-center">
+      <div class="card user-card">
+        <div class="card-body">
+          <h4 class="card-title text-center mb-4">Información del Usuario</h4>
+  
+          <form>
+            <div class="mb-3">
+              <label for="nombre" class="form-label"><strong>Nombre</strong></label>
+              <input
+                type="text"
+                id="nombre"
+                class="form-control"
+                [(ngModel)]="user.nombre"
+                name="nombre"
+              />
+            </div>
+  
+            <div class="mb-3">
+              <label for="apellido" class="form-label"><strong>Apellido</strong></label>
+              <input
+                type="text"
+                id="apellido"
+                class="form-control"
+                [(ngModel)]="user.apellido"
+                name="apellido"
+              />
+            </div>
+  
+            <div class="mb-3">
+              <label for="rut" class="form-label"><strong>RUT</strong></label>
+              <input
+                type="text"
+                id="rut"
+                class="form-control"
+                [(ngModel)]="user.rut"
+                name="rut"
+              />
+            </div>
+  
+            <div class="mb-3">
+              <label for="email" class="form-label"><strong>Correo Electrónico</strong></label>
+              <input
+                type="email"
+                id="email"
+                class="form-control"
+                [(ngModel)]="user.email"
+                name="email"
+              />
+            </div>
+  
+            <div class="mb-3">
+              <label for="password" class="form-label"><strong>Contraseña</strong></label>
+              <input
+                type="password"
+                id="password"
+                class="form-control"
+                [(ngModel)]="user.password"
+                name="password"
+              />
+            </div>
+  
+            <button type="button" class="btn btn-primary w-100 mt-3" (click)="saveChanges()">
+              Guardar
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  

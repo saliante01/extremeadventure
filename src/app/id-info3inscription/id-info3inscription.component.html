@@ -1,0 +1,14 @@
+<div class="container mt-5">
+    <h2>Información de las Semanas</h2>
+    <div *ngFor="let week of campWeeks" class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title">Semana: {{ week.id }}</h5>
+        <p class="card-text">Fecha de inicio: {{ week.start_date }}</p>
+        <p class="card-text">Fecha de término: {{ week.end_date }}</p>
+        <p class="card-text">Campamento: Campamento de Verano</p>
+        <p class="card-text">Precio: ${{ week.price }}</p>
+        <p class="card-text">Capacidad: {{ week.capacity }} por persona</p>
+      </div>
+    </div>
+  </div>
+  

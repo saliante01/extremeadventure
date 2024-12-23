@@ -1,0 +1,30 @@
+.about-more-camps-container {
+    text-align: center;
+    background-color: #f7f9fc; /* Fondo claro */
+    padding: 40px 20px;
+    color: #033893; /* Azul oscuro */
+  }
+  
+  .about-more-camps-container h3 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espaciado entre íconos */
+  }
+  
+  .social-link {
+    color: #033893; /* Azul oscuro */
+    font-size: 2.5rem; /* Tamaño de los íconos */
+    transition: transform 0.3s ease, color 0.3s ease; /* Transición suave */
+  }
+  
+  .social-link:hover {
+    color: #007bff; /* Azul brillante al pasar el mouse */
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+  }
+  

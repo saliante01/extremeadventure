@@ -1,0 +1,50 @@
+.start-process-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinea el contenido en la parte superior */
+    align-items: center;
+    padding: 20px; /* Añade espacio interno */
+    background-color: #f3f3f6; /* Fondo gris claro */
+  }
+  
+  .terms-box {
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px; /* Espaciado entre el recuadro y el botón */
+    color: #0c347e; /* Azul */
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .terms-box label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espaciado entre el texto y la casilla */
+  }
+  
+  .terms-box input[type="checkbox"] {
+    accent-color: #4d8abf; /* Color celeste para el checkbox */
+    transform: scale(1.2); /* Aumenta ligeramente el tamaño del checkbox */
+  }
+  
+  .start-button {
+    background-color: #4d8abf; /* Celeste */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px; /* Botón redondeado */
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .start-button:hover {
+    background-color: #3a6e99; /* Oscurece el celeste al pasar el cursor */
+    transform: scale(1.05); /* Agranda ligeramente el botón */
+  }
+  
+  .start-button:active {
+    transform: scale(0.95); /* Efecto al presionar el botón */
+  }
+  

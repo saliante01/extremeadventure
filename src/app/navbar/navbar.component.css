@@ -1,0 +1,148 @@
+/* Estilo cuando no hay scroll (navbar transparente, texto blanco) */
+.navbar-default {
+  background-color: black !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  padding: 3px 6px; /* Espaciado mínimo */
+}
+
+.navbar-default .nav-link {
+  color: white !important;
+  font-size: 0.9rem; /* Texto más grande */
+}
+
+.navbar-default .btn-black {
+  background-color: white;
+  color: black;
+  padding: 3px 8px; /* Botón ajustado */
+  font-size: 0.9rem; /* Texto más grande */
+}
+
+/* Estilo cuando hay scroll (navbar sólida, texto actual) */
+.navbar-scrolled {
+  background-color: white !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  padding: 2px 6px; /* Menor padding al hacer scroll */
+}
+
+.navbar-scrolled .nav-link {
+  color: #6a7385 !important;
+  font-size: 0.9rem; /* Texto más grande */
+}
+
+.navbar-scrolled .btn-black {
+  background-color: #4d8abf;
+  color: white;
+  padding: 3px 8px; /* Botón ajustado */
+  font-size: 0.9rem;
+}
+
+/* Estilos para la imagen del logotipo */
+.logo {
+  height: 75px; /* Tamaño fijo del logo */
+  width: auto;
+  transition: height 0.3s ease; /* Transición suave al cambiar tamaño */
+}
+
+/* Ajustes para pantallas grandes (1920x1080) */
+@media (min-width: 1920px) {
+  .navbar {
+    padding: 3px 6px; /* Espaciado compacto */
+  }
+
+  .navbar-scrolled {
+    padding: 2px 6px; /* Menor padding al hacer scroll */
+  }
+
+  .logo {
+    height: 75px; /* Mantener tamaño del logo */
+  }
+
+  .navbar-scrolled .logo {
+    height: 60px; /* Reducir tamaño del logo al hacer scroll */
+  }
+
+  .nav-link {
+    font-size: 1rem; /* Texto más legible */
+    padding: 4px 8px; /* Espaciado ajustado entre los links */
+  }
+
+  .btn-black {
+    font-size: 1rem;
+    padding: 4px 10px; /* Botón ajustado */
+  }
+}
+
+/* Ajustes para pantallas medianas (769px a 1919px) */
+@media (min-width: 769px) and (max-width: 1919px) {
+  .navbar {
+    padding: 3px 6px; /* Espaciado reducido */
+  }
+
+  .logo {
+    height: 75px; /* Tamaño fijo del logo */
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
+    padding: 4px 6px;
+  }
+
+  .btn-black {
+    font-size: 0.9rem;
+    padding: 3px 8px;
+  }
+}
+
+/* Ajustes para pantallas móviles (ancho máximo: 768px) */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap; /* Permite que los elementos se ajusten automáticamente */
+    padding: 3px 6px; /* Espaciado compacto */
+  }
+
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo {
+    height: 70px; /* Tamaño reducido del logo para móviles */
+  }
+
+  .navbar-toggler {
+    border: none; /* Elimina el borde del botón */
+    background-color: transparent; /* Fondo transparente */
+  }
+
+  .navbar-toggler-icon {
+    width: 16px;
+    height: 16px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%2833, 37, 41, 1%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    background-size: contain;
+  }
+
+  .navbar-nav {
+    flex-direction: column; /* Los links del menú se apilan verticalmente */
+    align-items: center; /* Centra los elementos */
+    margin-top: 4px; /* Espacio reducido entre el botón y los links */
+  }
+
+  .nav-item {
+    margin: 2px 0; /* Espaciado mínimo */
+  }
+
+  .nav-link {
+    font-size: 0.9rem; /* Texto más grande */
+    padding: 3px 6px; /* Espaciado interno ajustado */
+  }
+
+  .btn-black {
+    padding: 3px 6px; /* Botón ajustado */
+    font-size: 0.9rem; /* Texto más grande */
+  }
+
+  .navbar-scrolled {
+    padding: 2px 6px; /* Menor espacio al hacer scroll */
+  }
+}

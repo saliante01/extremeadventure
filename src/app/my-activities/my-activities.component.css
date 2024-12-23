@@ -1,0 +1,77 @@
+/* Estilos para el contenedor principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Título */
+  .title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Lista de actividades */
+  .activities-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  
+  /* Estilos para las tarjetas de actividad */
+  .activity-card {
+    background-color: #f0f8ff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 150px;
+    transition: transform 0.3s ease;
+  }
+  
+  .activity-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Número de la actividad */
+  .activity-number {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  /* Nombre de la actividad */
+  .activity-name {
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  /* Ajustes responsivos */
+  @media (max-width: 768px) {
+    .activity-card {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    .title {
+      font-size: 1.5rem;
+    }
+  }
+  
+  @media (min-width: 1920px) {
+    .container {
+      padding: 40px;
+    }
+  
+    .activity-card {
+      width: 200px;
+      margin: 20px;
+    }
+  
+    .title {
+      font-size: 3rem;
+    }
+  }
+  

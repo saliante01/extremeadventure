@@ -1,0 +1,12 @@
+footer {
+    background-color: #4d8abf !important;
+  }
+  
+  footer h5 {
+    font-weight: bold;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  

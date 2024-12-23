@@ -1,0 +1,67 @@
+<div class="admin-panel-edit-container">
+  <!-- Contenido principal -->
+  <div class="edit-course-container">
+    <h2 class="title">Editar Curso</h2>
+
+    <!-- Información del Curso -->
+    <div class="course-info">
+      <p><strong>Fecha de Inicio:</strong> {{ course.startDate | date }}</p>
+      <p><strong>Fecha de Término:</strong> {{ course.endDate | date }}</p>
+      <p><strong>Precio:</strong> {{ course.price | currency:'USD' }}</p>
+      <p><strong>Capacidad:</strong> {{ course.capacity }}</p>
+    </div>
+
+    <!-- Mostrar Actividades -->
+    <div class="activities-container">
+      <h3 class="title">Actividades</h3>
+      
+      <!-- Mostrar las actividades por día -->
+      <div *ngFor="let activity of activities">
+        <div class="activity-card">
+          <p><strong>Dia:</strong> {{ getDayOfWeek(activity.date) }}</p>
+          <p><strong>Actividad:</strong> {{ activityNames[activity.activity] }}</p>
+          <p><strong>Horario:</strong> {{ activity.start_time }} - {{ activity.end_time }}</p>
+          <p><strong>Ubicación:</strong> {{ activity.location }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Formulario para Editar Curso -->
+    <form (ngSubmit)="onSubmit()" class="edit-course-form">
+      <div class="mb-3">
+        <label for="courseName" class="form-label"><strong>Nombre del Curso</strong></label>
+        <input
+          type="text"
+          id="courseName"
+          class="form-control"
+          [(ngModel)]="course.name"
+          name="courseName"
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <label for="startDate" class="form-label"><strong>Fecha de Inicio</strong></label>
+        <input
+          type="date"
+          id="startDate"
+          class="form-control"
+          [(ngModel)]="course.startDate"
+          name="startDate"
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <label for="endDate" class="form-label"><strong>Fecha de Término</strong></label>
+        <input
+          type="date"
+          id="endDate"
+          class="form-control"
+          [(ngModel)]="course.endDate"
+          name="endDate"
+          required
+        />
+      </div>
+      <button type="submit" class="btn btn-primary w-100">Guardar Cambios</button>
+    </form>
+  </div>
+</div>

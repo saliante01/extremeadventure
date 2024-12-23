@@ -1,0 +1,90 @@
+/* Estilos generales para el contenedor */
+.container {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Título */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+/* Formulario */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Etiquetas de los campos */
+.form-label {
+  font-size: 16px;
+  color: #333;
+}
+
+/* Estilo de los campos de texto */
+input[type="date"],
+input[type="number"],
+select.form-control {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: #fff;
+}
+
+/* Campo requerido */
+input:invalid {
+  border-color: red;
+}
+
+/* Botón de envío */
+button[type="submit"] {
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos de los campos cuando están enfocados */
+input:focus,
+select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Diseño responsivo para pantallas pequeñas */
+@media (max-width: 576px) {
+  .container {
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  input[type="date"],
+  input[type="number"],
+  select.form-control {
+    font-size: 12px;
+  }
+
+  button[type="submit"] {
+    font-size: 14px;
+  }
+}

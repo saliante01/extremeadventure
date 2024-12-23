@@ -1,0 +1,64 @@
+<nav
+  [ngClass]="{ 'navbar-default': !isScrolled, 'navbar-scrolled': isScrolled }"
+  class="navbar navbar-expand-lg"
+>
+  <div class="container-fluid">
+    <!-- Logo dinámico -->
+    <a
+      class="navbar-brand d-flex align-items-center"
+      (click)="navigateToHomeAdmin()"
+      style="cursor: pointer;"
+    >
+      <img
+        [src]="isScrolled ? 'assets/logo2.png' : 'assets/logo1.png'"
+        alt="Admin Panel Logo"
+        class="navbar-logo me-2"
+      />
+    </a>
+
+    <!-- Botón de hamburguesa para móviles -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menú -->
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav">
+        <!-- Home -->
+        <li class="nav-item">
+          <button class="nav-link" (click)="navigateTo('home-user')">
+            Home
+          </button>
+        </li>
+
+        <!-- Curso de Verano -->
+        <li class="nav-item">
+          <button class="nav-link" (click)="navigateTo('header-mycourses')">
+           Mis Cursos
+          </button>
+        </li>
+
+        <!-- Curso de Invierno -->
+        <li class="nav-item">
+          <button class="nav-link" (click)="navigateTo('header-myinfo')">
+            Mi Perfil
+          </button>
+        </li>
+
+        <!-- Cerrar sesión -->
+        <li class="nav-item">
+          <button class="nav-link" (click)="logout()">Cerrar sesión</button>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</nav>

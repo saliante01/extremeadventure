@@ -1,0 +1,22 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@300;400;600;700&display=swap');
+
+
+body {
+    font-family: 'Onest', sans-serif;
+    margin: 0; /* Opcional: elimina márgenes predeterminados */
+    padding: 0;
+    line-height: 1.6; /* Ajusta el espacio entre líneas */
+  }
+  
+  /* Asegúrate de que todos los elementos usen la fuente Onest */
+  * {
+    font-family: 'Onest', sans-serif; /* Aplica Onest a todos los elementos */
+    box-sizing: border-box; /* Manejo de espacios más predecible */
+  }
+  
+  
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

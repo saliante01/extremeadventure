@@ -1,0 +1,78 @@
+/* Contenedor principal con Grid */
+.admin-panel-container {
+  display: grid;
+  grid-template-columns: 250px 1fr; /* Barra lateral fija y contenido expandible */
+  grid-template-rows: 100%; /* Toda la altura */
+  height: 100vh;
+  overflow: hidden; /* Evita desbordamientos */
+}
+
+
+/* Contenido principal */
+.user-info {
+  display: flex; /* Flexbox para centrar */
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto; /* Habilita desplazamiento vertical si es necesario */
+  padding: 20px;
+  background-color: #f8f9fa;
+  height: 100%; /* Ocupa todo el espacio disponible */
+}
+
+/* Tarjeta del formulario */
+.user-card {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #007bff;
+}
+
+/* Inputs y etiquetas */
+.form-label {
+  font-weight: bold;
+}
+
+input.form-control {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+/* Botón */
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Soporte para pantallas pequeñas */
+@media (max-width: 768px) {
+  .admin-panel-container {
+    grid-template-columns: 1fr; /* Elimina la barra lateral como columna */
+    grid-template-rows: auto 1fr; /* Navbar arriba, contenido abajo */
+  }
+
+  app-lateralvar-admin {
+    grid-row: 1; /* La barra lateral se coloca arriba */
+    width: 100%; /* Ocupa todo el ancho */
+    height: auto; /* Ajusta la altura automáticamente */
+  }
+
+  .user-info {
+    grid-row: 2;
+    padding: 10px;
+  }
+}

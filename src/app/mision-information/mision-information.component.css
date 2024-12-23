@@ -1,0 +1,167 @@
+.information-wrapper {
+    display: flex;
+    flex-direction: row-reverse; /* Cambia el orden: texto a la derecha, imagen a la izquierda */
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    height: auto;
+    background-color: #f3f3f6;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.image-section {
+    position: relative; /* Necesario para posicionar elementos relativos */
+    width: 100%; /* Ocupa todo el ancho */
+    display: flex;
+    justify-content: flex-start; /* Mueve la imagen más hacia la izquierda */
+    align-items: center; /* Centra verticalmente */
+}
+
+.image-container {
+    position: relative; /* Necesario para el control de capas */
+    width: 100%; /* Ajusta el ancho de la imagen al contenedor */
+    height: auto; /* Ajusta la altura proporcionalmente */
+    margin-left: 100px; /* Elimina desplazamiento horizontal */
+    max-width: 800px; /* Máximo ancho */
+    aspect-ratio: 16/10; /* Relación de aspecto para mantener proporciones */
+}
+.information-container h2 {
+    font-size: clamp(2rem, 4vw, 3rem); /* Tamaño dinámico */
+    color: #0c347e; /* Azul oscuro */
+    margin-bottom: 20px; /* Espaciado debajo del título */
+    text-align: left; /* Alineación al texto */
+}
+
+
+.image-container img {
+    width: 80%; /* Imagen ocupa todo el ancho del contenedor */
+    height: 100%; /* Imagen ocupa toda la altura del contenedor */
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+    border-radius: 20px 0px 20px 0px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destacar la imagen */
+}
+
+.overlay-text {
+    position: absolute;
+    bottom: 70%; /* Asegura que el texto quede dentro de la imagen */
+    left: 86%; /* Centra el texto horizontalmente */
+    transform: translateX(-50%);
+    background-color: #b3e5fc; /* Fondo celeste claro */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 50px; /* Esquinas redondeadas */
+    z-index: 3; /* Coloca el texto sobre la imagen */
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
+}
+
+.overlay-text p {
+    margin: 0;
+    font-size: clamp(1.5rem, 3vw, 2.5rem); /* Tamaño dinámico */
+    font-weight: bold;
+    color: #ffffff; /* Letras blancas */
+}
+
+.information-container {
+    width: 90%; /* Ocupa el ancho disponible */
+    padding: 20px;
+    color: #333; /* Texto oscuro */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Alinea el texto hacia arriba */
+    align-items: flex-start; /* Alinea el texto a la izquierda */
+}
+
+.information-container h2 {
+    font-size: clamp(2rem, 4vw, 3rem); /* Tamaño dinámico */
+    color: #0c347e; /* Azul oscuro */
+    margin-bottom: 20px;
+}
+
+.information-container p {
+    font-size: clamp(1rem, 2.5vw, 1.2rem); /* Tamaño dinámico */
+    color: #0a3e72; /* Azul claro */
+    line-height: 1.6; /* Mejor legibilidad */
+    margin-bottom: 20px;
+}
+
+/* Media Queries para pantallas grandes */
+@media (min-width: 1920px) {
+    .information-wrapper {
+        gap: 40px; /* Más espacio entre los elementos */
+        padding: 40px; /* Mayor padding */
+    }
+
+    .image-container {
+        max-width: 1200px; /* Aumenta el tamaño máximo de la imagen */
+        aspect-ratio: 16/9; /* Relación de aspecto más amplia */
+    }
+
+    .overlay-text {
+        bottom: 60%; /* Ajusta la posición del texto */
+        left: 80%; /* Mueve el texto más hacia la izquierda */
+        padding: 15px 30px; /* Espaciado más amplio */
+    }
+
+    .overlay-text p {
+        font-size: clamp(2rem, 4vw, 3rem); /* Aumenta el tamaño del texto */
+    }
+
+    .information-container h2 {
+        font-size: clamp(2.5rem, 5vw, 4rem); /* Encabezado más grande */
+    }
+
+    .information-container p {
+        font-size: clamp(1.2rem, 3vw, 1.5rem); /* Texto más grande */
+        line-height: 1.8; /* Mejor espaciado */
+    }
+}
+
+/* Media Queries para pantallas móviles */
+@media (max-width: 768px) {
+    .information-wrapper {
+        flex-direction: column; /* Apila los elementos */
+        align-items: center; /* Centra el contenido */
+        gap: 20px; /* Espaciado reducido */
+    }
+
+    .image-section {
+        width: 100%; /* Cada sección ocupa todo el ancho */
+        justify-content: center; /* Centra los elementos horizontalmente */
+    }
+
+    .image-container {
+        width: 100%; /* Ajusta el ancho de la imagen en pantallas pequeñas */
+        height: auto; /* Ajusta la altura automáticamente */
+        margin-left: 0; /* Resetea el desplazamiento hacia la izquierda */
+        max-width: 500px; /* Máximo ancho reducido */
+    }
+
+    .image-container img {
+        width: 100%; /* Imagen ocupa todo el ancho del contenedor */
+        border-radius: 0 20px 0 20px; /* Redondeo reducido */
+    }
+
+    .overlay-text {
+        bottom: 10%; /* Ajusta el texto sobre la imagen */
+        left: 50%; /* Centra el texto horizontalmente */
+        transform: translateX(-50%);
+        padding: 8px 16px; /* Espaciado más pequeño */
+    }
+
+    .overlay-text p {
+        font-size: clamp(1rem, 3vw, 1.5rem); /* Texto más pequeño */
+    }
+
+    .information-container h2 {
+        font-size: clamp(1.5rem, 4vw, 2.5rem); /* Encabezado más pequeño */
+        margin-bottom: 15px;
+    }
+
+    .information-container p {
+        font-size: clamp(0.9rem, 2.5vw, 1rem); /* Texto reducido */
+        line-height: 1.4; /* Espaciado ajustado */
+    }
+}

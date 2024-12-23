@@ -1,0 +1,145 @@
+/* Estilos generales para todos los tamaños de pantalla */
+.header-container {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.header-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Agregar el degradado */
+.header-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.95) 10%, rgba(0, 0, 0, 0.7) 30%, rgba(0, 0, 0, 0.3) 70%, rgba(0, 0, 0, 0) 100%);
+    z-index: 5;
+    pointer-events: none;
+}
+
+app-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.main-title {
+    font-size: 2rem;
+    font-weight: normal;
+    color: white;
+    margin: 0 0 20px 0;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.header-text {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 10;
+}
+
+.header-title-container {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 10px;
+}
+
+.header-title {
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1.2;
+    color: white;
+}
+
+.header-subtitle {
+    font-size: 3.5rem;
+    font-weight: normal;
+    margin: 0;
+    color: white;
+}
+
+.header-location {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-weight: normal;
+}
+
+.location-icon {
+    font-size: 1.2rem;
+    color: #d9534f;
+}
+
+/* Media Queries */
+
+/* Soporte para resoluciones móviles (menor a 768px) */
+@media (max-width: 767px) {
+    .header-title-container {
+        flex-direction: column; /* Apilar el título y el subtítulo */
+        text-align: center;
+    }
+
+    .header-title {
+        font-size: 3rem; /* Reducir tamaño del título */
+    }
+
+    .header-subtitle {
+        font-size: 2.5rem; /* Reducir tamaño del subtítulo */
+    }
+
+    .header-location {
+        font-size: 1rem; /* Reducir tamaño de la ubicación */
+    }
+
+    .main-title {
+        font-size: 1.5rem; /* Ajustar tamaño del título principal */
+    }
+
+    .header-text {
+        top: 40%; /* Ajustar la posición para pantallas pequeñas */
+    }
+}
+
+/* Soporte para resolución de 1920x1080 */
+@media (min-width: 1920px) {
+    .header-title {
+        font-size: 5rem; /* Aumentar tamaño del título */
+    }
+
+    .header-subtitle {
+        font-size: 4rem; /* Aumentar tamaño del subtítulo */
+    }
+
+    .main-title {
+        font-size: 3rem; /* Ajustar tamaño del título principal */
+    }
+
+    .header-location {
+        font-size: 1.5rem; /* Aumentar tamaño de la ubicación */
+    }
+
+    .header-text {
+        top: 30%; /* Ajustar la posición para pantallas grandes */
+    }
+}

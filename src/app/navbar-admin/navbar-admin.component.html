@@ -1,0 +1,84 @@
+<nav
+  [ngClass]="{ 'navbar-default': !isScrolled, 'navbar-scrolled': isScrolled }"
+  class="navbar navbar-expand-lg"
+>
+  <div class="container-fluid">
+    <!-- Logo dinámico -->
+    <a
+      class="navbar-brand d-flex align-items-center"
+      (click)="navigateToHomeAdmin()"
+      style="cursor: pointer;"
+    >
+      <img
+        [src]="isScrolled ? 'assets/logo2.png' : 'assets/logo1.png'"
+        alt="Admin Panel Logo"
+        class="navbar-logo me-2"
+      />
+    </a>
+
+    <!-- Botón de hamburguesa para móviles -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menú -->
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav">
+        <!-- Home -->
+        <li class="nav-item">
+          <button class="nav-link" (click)="navigateTo('home-admin')">
+            HOME
+          </button>
+        </li>
+
+        <!-- Curso de Verano -->
+        <li class="nav-item">
+          <button class="nav-link" (click)="navigateTo('header-summer-camp')">
+            CURSO DE VERANO
+          </button>
+        </li>
+
+        <!-- Agregar Curso de Verano -->
+        <li class="nav-item">
+          <button class="nav-link" (click)="navigateTo('header-activities')">
+           ACTIVIDADES
+          </button>
+        </li>
+
+        <li class="nav-item">
+          <button class="nav-link" (click)="navigateTo('header-weeks')">
+           SEMANAS
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" (click)="navigateTo('header-camps')">
+           CAMPAMENTO
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" (click)="navigateTo('header-adduser')">
+            AÑADIR USUARIO
+          </button>
+        </li>
+        <!-- Cerrar sesión -->
+        <li class="nav-item">
+          <button class="nav-link" (click)="logout()">CERRAR SESIÓN</button>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Admin Label -->
+    <div class="admin-label d-flex align-items-center">
+      <span class="status-dot me-2"></span>
+      <span class="admin-text">Admin</span>
+    </div>
+  </div>
+</nav>
